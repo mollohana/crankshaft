@@ -32,7 +32,7 @@ if [ $FLIP_SCREEN -ne 0 ] || [ $INVERT_MODE_GPIO -ne 1 ] ; then
         sed -i '/./,/^$/!d' /boot/config.txt
         sh -c "echo '' >> /boot/config.txt"
         sh -c "echo '# Display rotation' >> /boot/config.txt"
-        sh -c "echo 'lcd_rotate=2' >> /boot/config.txt"
+        sh -c "echo 'lcd_rotate=1' >> /boot/config.txt"
         sync
         echo "[${CYAN}${BOLD} INFO ${RESET}] *******************************************************" >/dev/tty3
         echo "[${CYAN}${BOLD} INFO ${RESET}] Display rotation activated" >/dev/tty3
